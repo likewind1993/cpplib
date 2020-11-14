@@ -40,7 +40,12 @@ class Queue {
     std::lock_guard<std::mutex> lck(m_);
     return queue_.back();
   }
-
+  bool try_pop(T& value) {
+    std::lock_guard<std::mutex> lck(m_);
+    if (queue_.empty()) return false;
+    value = queue_.front();
+    queue_.pop();
+  }
   void wait_and_pop(T& value) {
     std::unique_lock<std::mutex> lck(m_);
     cond_.wait(lck, [this]{ return !queue_.empty(); });

@@ -3,9 +3,17 @@ load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
 package(default_visibility = ["//visibility:public"])
 
 cc_library(
-    name = "common",
-    hdrs = [
-        "queue.h",
-        "thread_pool.h",
-    ]
+  name = "utils",
+  hdrs = [
+    "quick_sort.h",
+  ]
+)
+cc_binary (
+  name = "quick_sort_test", 
+  srcs = [
+    "quick_sort_test.cc",
+  ],
+  deps = [
+    ":utils",
+  ]
 )
