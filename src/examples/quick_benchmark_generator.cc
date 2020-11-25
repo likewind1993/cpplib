@@ -7,7 +7,7 @@
 
 const static std::string kDefaultSplitor = " ";
 const static std::string kDefaultFileName = "random_nums";
-const static size_t kGeneratedNum = 100000000;
+const static size_t kGeneratedNum = 1000000;
 
 bool LoadArrays(const std::string& file_name,
                 std::vector<int>* nums) {
