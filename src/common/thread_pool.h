@@ -3,6 +3,7 @@
 #include "src/common/queue.h"
 
 namespace common {
+
 using Task = std::function<void()>;
 class ThreadPool {
  public:
@@ -41,4 +42,5 @@ class ThreadPool {
   Queue<std::function<void()> > work_queue_;  // 1
   std::vector<std::thread> threads_;  // 2
 };
+
 }  // namespace common

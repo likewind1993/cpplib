@@ -8,6 +8,17 @@ cc_library(
     "quick_sort.h",
   ]
 )
+
+cc_binary(
+  name = "quick_benchmark_generator",
+  srcs = [
+    "quick_benchmark_generator.cc",
+  ],
+  deps = [
+    "//src/common:common",
+  ]
+)
+
 cc_binary (
   name = "quick_sort_test", 
   srcs = [

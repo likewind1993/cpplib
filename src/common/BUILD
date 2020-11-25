@@ -7,5 +7,6 @@ cc_library(
     hdrs = [
         "queue.h",
         "thread_pool.h",
+        "string_utils.h",
     ]
 )
