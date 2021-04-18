@@ -6,6 +6,7 @@ cc_library(
     name = "common",
     hdrs = [
         "queue.h",
+        "thread_pool_interface.h",
         "thread_pool.h",
         "string_utils.h",
     ]
