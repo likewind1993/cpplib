@@ -9,5 +9,7 @@ cc_library(
         "thread_pool_interface.h",
         "thread_pool.h",
         "string_utils.h",
-    ]
+    ],
+    linkopts = ["-pthread"],
+    alwayslink = 1,
 )

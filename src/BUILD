@@ -7,5 +7,5 @@ cc_binary(
     srcs = ["consumer.cc"],
     deps = [
         "//src/common:common",
-    ]
+    ],
 )

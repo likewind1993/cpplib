@@ -1,4 +1,5 @@
 #include <atomic>
+#include <functional>
 #include <thread>
 #include "src/common/queue.h"
 
